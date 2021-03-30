@@ -3,27 +3,25 @@ class StaticPagesController < ApplicationController
     # render :home
   end
 
+  # UserController
+
+  # def show (aka profile page)
+  # end
+
+  # def new
+  # rendering a new form aka a signup form
+  # end 
+
+  # def create
+  #   # Use form info to scrape 
+  #   # Use Scrape results + form  data to User.create
+  #   # redirect to user show path
+  # end 
+
   def scrape_search_results
-    agent = Mechanize.new
-
-    page = agent.get("http://howmanyofme.com/search/")
-    #p page.title
-
-    search_form = page.form("datain")
-    search_form.given = params[:fname]
-    search_form.sur = params[:lname]
-    
-    page = agent.submit(search_form, search_form.buttons.first)
-    #pp page
-
-    # num Of people with the same first name
-    @first_name_match = page.search('span.popnum')[0].text
-    # num Of  peaple with the same last name
-    @last_name_match = page.search('span.popnum')[1].text
-    # this will get the num of peaple with the same name
-    @full_name_match = page.search('span.popnum')[-1].text
-
-    # render scrape_search_results
+    ws = WebScrape.new
+    @all_data = ws.scrape(params[:fname], params[:lname])
+    # byebug
   end
 
   def help
@@ -32,6 +30,4 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def hello
-  end
 end
