@@ -1,0 +1,16 @@
+<% provide(:title, "Search") %>
+<h1>how-many-of-me</h1>
+<p>
+    Try typing your name to find out how many people in the US share it with you
+</p>
+
+<%= form_tag "/results"  do %>
+  <%= label_tag "First Name" %>
+  <%= text_field_tag :fname %>
+
+  <%= label_tag "First Name" %>
+  <%= text_field_tag :lname %>
+
+  <%= submit_tag "Search For Name" %>
+
+<% end  %>
