@@ -1,3 +1,3 @@
 class History < ApplicationRecord
-    belongs_to :histories
+    belongs_to :user
 end

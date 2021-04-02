@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_052742) do
+ActiveRecord::Schema.define(version: 2021_04_01_185644) do
 
   create_table "histories", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "s_name"
+    t.string "s_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "first_name_matches"
+    t.integer "last_name_matches"
+    t.integer "full_name_matches"
   end
 
   create_table "users", force: :cascade do |t|

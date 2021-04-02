@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :history
+    has_many :histories
 
     before_save { self.email = email.downcase }
     validates :name, presence: true

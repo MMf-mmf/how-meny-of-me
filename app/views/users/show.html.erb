@@ -1,5 +1,14 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
+
+<h1 class="profile">
   <%= @user.name %>
 </h1>
+  <div class="center">
+
+  <div class="profile">
+<p> there is  <mark><%= pluralize(number_with_delimiter(current_user.unique_fname), "person") %></mark>  who share the same <mark>first</mark>  name with you</p>
+<p> there is  <mark><%= pluralize(number_with_delimiter(current_user.unique_lname), "person") %></mark>   who share the same <mark>last</mark>  name with you</p>
+<p> there is  <mark><%= pluralize(number_with_delimiter(current_user.unique_full_name), "person") %></mark>   who share the same <mark>full name</mark>  with you</p>
+</div>
+
+</div>

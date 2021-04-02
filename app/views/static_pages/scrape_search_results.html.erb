@@ -1,5 +1,16 @@
 <% provide(:title, "Results") %>
+<h5 class="profile">
+  <p><mark><%=current_user.name %></mark> The results for your search are</p>
+</h5>
 
-<p> <%= @all_data[0] %></p>
-<p><%= @all_data[1] %></p>
-<p><%= @all_data[2] %></p>
+  <div class="center">
+
+  <div class="profile">
+<% if @all_data%>
+<p> there is <mark><%=pluralize(number_with_delimiter(@all_data[0]), "person") %></mark> who share the same <mark>first</mark>  name</p>
+<p> there is <mark><%=pluralize(number_with_delimiter(@all_data[1]), "person") %></mark> who share the same <mark>last</mark>  name</p>
+<p> there is <mark><%=pluralize(number_with_delimiter(@all_data[2]), "person") %></mark>  who share the same <mark>full name</mark>  name</p>
+</div>
+ 
+</div>
+<% end %>

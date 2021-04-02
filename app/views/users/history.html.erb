@@ -1,0 +1,41 @@
+<% provide(:title, current_user.name) %>
+<h1>My History</h1>
+
+
+
+
+<table>
+  <tr class="first-tr">
+    <th>Name</th>
+    <th> First Name Count </th>
+    <th> Last Name Count </th>
+    <th> Full Name Count </th>
+  </tr>
+  
+  <% @history.each do |hist|%>
+    <tr>
+        <td><%=hist.s_name %> </td>
+        <td><%=number_with_delimiter(hist.first_name_matches) %> </td>
+        <td><%=number_with_delimiter(hist.last_name_matches) %> </td>
+        <td><%=number_with_delimiter(hist.full_name_matches) %> </td>
+    </tr>
+  <% end %>
+
+</table>
+
+<table>
+  <tr class="first-tr">
+    <th> First Name Average </th>
+    <th> Last Name Average </th>
+    <th> Full Name Average </th>
+  </tr>
+  
+
+    <tr>
+        <td><%=number_with_delimiter(@fname_average) %> </td>
+        <td><%=number_with_delimiter(@lname_average) %> </td>
+        <td><%=number_with_delimiter(@full_name_average) %> </td>
+    </tr>
+  
+  
+</table>
