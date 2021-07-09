@@ -1,4 +1,4 @@
-<h1>publication description:</h1>
+<h1> Application description:</h1>
 
 <ul>
     <li>this app allows the visitor to create an account </li>
@@ -10,7 +10,7 @@
 
 
 
-<h2> Technologys used</h2>
+<h2> Technologys used:</h2>
 
 
  <ol>
