@@ -1,24 +1,8 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h1>Read publication description:</h1>
+    1: this app allows the visitor to create an account 
+    2: search his or anyone else's name
+    3: the app will return an estimate of how many people in the USA share the same name
+    4: app will create a detailed chart on all these searches which that user searched for
+       Along with all the corresponding data which can be collected
+       
+    
