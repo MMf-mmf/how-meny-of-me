@@ -29,8 +29,10 @@
   <li>
     mechanize with all its dependencies for the web scraping part of the app 
  </li>
-    
  </ol>
+ 
+ <h3> Demo video coming soon </h3>
+
 
        
     
