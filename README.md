@@ -31,7 +31,7 @@
  </li>
  </ol>
  
- <h3> Demo video coming soon </h3>
+<a href="https://www.youtube.com/watch?v=XzU2f4BX0GY"> video demo</a>
 
 
        
